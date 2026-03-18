@@ -2,6 +2,7 @@
 
 import os
 import numpy as np
+import json
 import argparse
 
 from glob import glob
@@ -239,7 +240,7 @@ def main():
     mp = args.mask_interpolator
     
     if args.voxel_size:
-        voxel_size = args.voxel_size
+        voxel_size = json.loads(args.voxel_size)
 
     else:
         voxel_size = average_voxel_calculator(nifti_dir)
