@@ -3,7 +3,7 @@ This is a repository with the code and workflow for the machine learning based r
 Vithayathil M, Koku D, Campani C, Nault JC, Sutter O, Ganne-Carrié N, Aboagye EO, Sharma R. Machine learning based radiomic models outperform clinical biomarkers in predicting outcomes after immunotherapy for hepatocellular carcinoma. J Hepatol. 2025 Oct;83(4):959-970. [doi: 10.1016/j.jhep.2025.04.017](https://www.journal-of-hepatology.eu/article/S0168-8278(25)00244-2/fulltext)
 . Epub 2025 Apr 17. PMID: 40246150.
 
-# Features
+## Features
 <ins>Image preprocessing</ins><br/>
 -dicom to nifti conversion<br/>
 -voxel resampling<br/><br/>
@@ -22,7 +22,7 @@ Vithayathil M, Koku D, Campani C, Nault JC, Sutter O, Ganne-Carrié N, Aboagye E
 -Decision curve analysis<br/>
 -Feature importance<br/>
 
-# Directory structure
+## Directory structure
 ```
 project_root/
 ├── src/                # Core implementation
@@ -34,9 +34,10 @@ project_root/
 │   └── 2024_Nov_11_ICL_Paris_ICI_ML_OS_JH.ipynb         # Notebook predicting 1-year mortality 
 └── requirements.txt
 ```
-#Installation
+## Installation
+Uses Python 3.8.8 
 ```bash
 pip install -r requirements.txt
 ```
 
-#Usage
+# Usage
