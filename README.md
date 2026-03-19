@@ -26,10 +26,10 @@ Vithayathil M, Koku D, Campani C, Nault JC, Sutter O, Ganne-Carrié N, Aboagye E
 ```
 project_root/
 ├── src/                # Core implementation
-│   ├── images/           # Dataset, DataModule, Transforms
-│   ├── data/         # Encoders, CLIP, SimCLR
-│   ├── model_builder/       # Trainer, Losses
-│   └── model_evaluation/          # DCA, Visualization
+│   ├── images/           # Image preprocessing codes
+│   ├── data/         # Data preprocessing codes
+│   ├── model_builder/       # Model builder and feature selection codes
+│   └── model_evaluation/          # Model evaluation 
 ├── notebooks/            # Notebooks for radiomic model construction and evaluation
 │   └── 2024_Nov_11_ICL_Paris_ICI_ML_OS_JH.ipynb         # Notebook predicting 1-year mortality 
 └── requirements.txt
@@ -40,4 +40,26 @@ Uses Python 3.8.8
 pip install -r requirements.txt
 ```
 
-# Usage
+## Usage
+### Dicom-to-nifti conversion
+Python file to convert dicom files to nifti files<br/>
+
+Ensure the dicom directory stucture is as follows:
+```
+dicom directory/
+├── 001/                # Scan number
+│   ├── xxxxxxxx.dcm       # dicom files for each scan in the directory
+│   └── xxxxxxxx.dcm      
+│── 002/
+│   ├── xxxxxxxx.dcm       
+│   └── xxxxxxxx.dcm
+│
+...
+└──  
+```
+Code
+```bash
+python dicom_nifti_conversion.py -dicom_directory path -nifti_directory path --compression=True
+```
+Output<br/>
+Directory with subdirectory for each case with nifti files for each dicom series
