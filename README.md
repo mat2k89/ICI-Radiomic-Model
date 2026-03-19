@@ -23,21 +23,20 @@ Vithayathil M, Koku D, Campani C, Nault JC, Sutter O, Ganne-Carrié N, Aboagye E
 -Feature importance<br/>
 
 # Directory structure
-
+```
 project_root/
 ├── src/                # Core implementation
-│   ├── data/           # Data merging, imputation, feature engineering
-│   ├── images/         # Image preprocessing, dicom-to-nifti conversion, voxel resampling
-│   ├── model_builder/  # 
+│   ├── images/           # Dataset, DataModule, Transforms
+│   ├── data/         # Encoders, CLIP, SimCLR
+│   ├── model_builder/       # Trainer, Losses
 │   └── model_evaluation/          # DCA, Visualization
-├── notebooks/            # Executable scripts
-│   ├── 2024_Nov_11_ICL         # 10-fold CV script
-│   ├── y # Optuna tuning script
-│   └──    # Comparison & Figure Generation
-├── figures/            # Generated Results
-│   ├── analysis/       # Net Benefit, Accuracy Boxplots
-│   └── ...
+├── notebooks/            # Notebooks for radiomic model construction and evaluation
+│   └── 2024_Nov_11_ICL_Paris_ICI_ML_OS_JH.ipynb         # Notebook predicting 1-year mortality 
 └── requirements.txt
+```
+#Installation
+```bash
+pip install -r requirements.txt
+```
 
-
-Python 3.8.8
+#Usage
